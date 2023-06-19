@@ -1,56 +1,59 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Random Password Generator</title>
-  <link rel="icon" href="./password.png" type="image/icon type">
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Heebo&family=Quicksand&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./styles.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Random Password Generator</title>
+    <link rel="icon" href="./password.png" type="image/icon type" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Heebo&family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="title">Random Password Generator</h2>
+      <div class="result">
+        <div class="field-title">Generated Password</div>
+        <div class="result__info right">click the button to copy</div>
+        <div class="result__info left">copied</div>
+        <div class="result__viewbox" id="result">CLICK TO GENERATE</div>
+        <button id="copy-btn"><i class="far fa-copy"></i></button>
+      </div>
+      <div class="length range__slider" data-min="4" data-max="32">
+        <div class="length__title field-title" data-length="0">length:</div>
+        <input id="slider" type="range" min="4" max="32" value="16" />
+      </div>
 
-</head>
-<body>
+      <div class="settings">
+        <span class="field-title">settings</span>
+        <div class="setting">
+          <input type="checkbox" id="uppercase" checked />
+          <label for="uppercase">Include Uppercase</label>
+        </div>
+        <div class="setting">
+          <input type="checkbox" id="lowercase" />
+          <label for="lowercase">Include Lowercase</label>
+        </div>
+        <div class="setting">
+          <input type="checkbox" id="number" />
+          <label for="number">Include Numbers</label>
+        </div>
+        <div class="setting">
+          <input type="checkbox" id="symbol" />
+          <label for="symbol">Include Symbols</label>
+        </div>
+      </div>
 
-<div class="container">
-	<h2 class="title">Random Password Generator</h2>
-	<div class="result">
-		<div class="field-title">Generated Password</div>
-		<div class="result__info right">click the button to copy</div>
-		<div class="result__info left">copied</div>
-		<div class="result__viewbox" id="result">CLICK TO GENERATE</div>
-		<button id="copy-btn"><i class="far fa-copy"></i></button>
-	</div>
-	<div class="length range__slider" data-min="4" data-max="32">
-		<div class="length__title field-title" data-length='0'>length:</div>
-		<input id="slider" type="range" min="4" max="32" value="16" />
-	</div>
+      <button class="btn generate" id="generate">Generate Password</button>
+    </div>
 
-	<div class="settings">
-		<span class="field-title">settings</span>
-		<div class="setting">
-			<input type="checkbox" id="uppercase" checked />
-			<label for="uppercase">Include Uppercase</label>
-		</div>
-		<div class="setting">
-			<input type="checkbox" id="lowercase"/>
-			<label for="lowercase">Include Lowercase</label>
-		</div>
-		<div class="setting">
-			<input type="checkbox" id="number"/>
-			<label for="number">Include Numbers</label>
-		</div>
-		<div class="setting">
-			<input type="checkbox" id="symbol" />
-			<label for="symbol">Include Symbols</label>
-		</div>
-	</div>
-
-	<button class="btn generate" id="generate">Generate Password</button>
-</div>
-
-  <script  src="./main.js"></script>
-
-</body>
+    <script src="./main.js"></script>
+  </body>
 </html>
